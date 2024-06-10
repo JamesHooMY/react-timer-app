@@ -1,0 +1,63 @@
+.timer-app {
+    font-family: Arial, sans-serif; /* Consistent font across the app */
+    text-align: center; /* Center aligning all the text and buttons */
+    padding: 20px; /* Padding around the content */
+    background-color: #f0f0f0; /* Light grey background for visibility */
+    border-radius: 8px; /* Rounded corners for aesthetic appeal */
+    margin: 20px auto; /* Centering the timer app horizontally */
+    width: 90%; /* Width of the timer application */
+    max-width: 600px; /* Maximum width to maintain usability */
+}
+
+.timer-title {
+    color: #333; /* Dark grey for better readability */
+    margin-bottom: 20px; /* Space below the title */
+}
+
+.timer-display {
+    font-size: 2.5em; /* Large font size for easy reading */
+    margin: 10px 0; /* Space around the timer display */
+    padding: 10px; /* Padding inside the timer display */
+    background-color: #ffffff; /* White background to highlight the time */
+    border: 1px solid #ccc; /* Subtle border around the timer display */
+    border-radius: 5px; /* Rounded corners for the display */
+    display: inline-block; /* Making the display block to manage its own space */
+    color: #333; /* Dark grey text color */
+}
+
+.button-group {
+    margin: 20px 0; /* Space around the button group */
+}
+
+.timer-button {
+    padding: 10px 20px; /* Padding inside the buttons for a better click area */
+    font-size: 16px; /* Font size that is easy to read */
+    color: white; /* Text color */
+    background-color: #007bff; /* Bootstrap's primary blue for visibility */
+    border: none; /* No border for a cleaner look */
+    border-radius: 5px; /* Rounded button edges */
+    margin: 0 10px; /* Spacing between buttons */
+    cursor: pointer; /* Cursor to pointer to indicate button */
+}
+
+.timer-button:hover {
+    background-color: #0056b3; /* Darker shade on hover for feedback */
+}
+
+.timer-table {
+    width: 100%; /* Full width to use available space */
+    margin-top: 20px; /* Space above the table */
+    border-collapse: collapse; /* Collapsing borders for a clean table look */
+}
+
+.timer-table th,
+.timer-table td {
+    border: 1px solid #ddd; /* Light border for cells */
+    padding: 8px; /* Padding for content within cells */
+    text-align: left; /* Align text to the left in table cells */
+}
+
+.timer-table th {
+    background-color: #f8f9fa; /* Light background for headers */
+    color: #333; /* Dark grey text color for headers */
+}

@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import './TimerApp.css'; // Import the CSS for styling
 
 const TimerApp: React.FC = () => {
   const [time, setTime] = useState<number>(0);
@@ -47,17 +48,19 @@ const TimerApp: React.FC = () => {
     return Math.min(...laps.slice(1));
   };
 
-  return (
-    <div>
-      <h1>Seconds Timer</h1>
-      <div>{formatTime(time)}</div>
-      <button onClick={handleStartStop}>
-        {timerOn ? 'STOP' : 'START'}
-      </button>
-      <button onClick={handleLapReset}>
-        {timerOn ? 'LAP' : 'RESET'}
-      </button>
-      <table>
+   return (
+    <div className="timer-app">
+      <h1 className="timer-title">Seconds Timer</h1>
+      <div className="timer-display">{formatTime(time)}</div>
+      <div className="button-group">
+        <button className="timer-button" onClick={handleStartStop}>
+          {timerOn ? 'STOP' : 'START'}
+        </button>
+        <button className="timer-button" onClick={handleLapReset}>
+          {timerOn ? 'LAP' : 'RESET'}
+        </button>
+      </div>
+      <table className="timer-table">
         <thead>
           <tr>
             <th>Lap #</th>
@@ -66,7 +69,7 @@ const TimerApp: React.FC = () => {
         </thead>
         <tbody>
           {laps.map((lap, index) => (
-            <tr key={index} style={{color: lap === getMaxLap() ? 'red' : lap === getMinLap() ? 'green' : 'black'}}>
+            <tr key={index} style={{ color: lap === getMaxLap() ? 'red' : lap === getMinLap() ? 'green' : 'black' }}>
               <td>Lap {laps.length - index}</td>
               <td>{formatTime(lap)}</td>
             </tr>
